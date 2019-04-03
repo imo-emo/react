@@ -5,6 +5,7 @@ import {Route,Switch,Redirect} from 'react-router-dom';
 import App from '../App';
 import One from '../container/one';
 import Two from '../container/two';
+import render from '../container/render'
 
 //定义root
 const Root = ()=>(
@@ -16,8 +17,9 @@ const Root = ()=>(
                     <App>
                         <Switch>
                             <Route path="/one" exact component={One}></Route>
+                            <Route path="/renders" component={render}></Route>
                             <Route path="/two" component={Two}></Route>
-                            <Route render={()=><Redirect to="/one"/>}/>
+                            <Route render={()=><Redirect to="/renders"/>}/>
                         </Switch>
                     </App>
                 )}
