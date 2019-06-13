@@ -26,6 +26,9 @@ const dataList = [
     }, {
         url: '/heighChild',
         name: '高阶组件'
+    }, {
+        url: '/context',
+        name: 'context'
     }
 ]
 export default dataList;

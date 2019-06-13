@@ -13,6 +13,7 @@ import list from '../container/list';
 import forms from '../container/form';
 import stateAscension from '../container/stateAscension';
 import heighChild from '../container/heighChild';
+import Contexts from '../container/context';
  
 //定义root
 const Root = ()=>(
@@ -33,6 +34,7 @@ const Root = ()=>(
                             <Route path="/forms" component={forms}></Route>
                             <Route path="/heighChild" component={heighChild}></Route>
                             <Route path="/stateAscension" component={stateAscension}></Route>
+                            <Route path="/context" component={Contexts}></Route>
                             <Route render={()=><Redirect to="/renders"/>}/>
                         </Switch>
                     </App>

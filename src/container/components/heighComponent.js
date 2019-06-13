@@ -9,11 +9,11 @@ const Height = Child => {
             }
         }
         handleClick = () => {
-            console.log("handle click")
+            alert(1)
         }
         render () {
             return (
-                <Child { ...this.props } handleClick={this.handleClick} { ...this.state } />
+                <Child handleClick={this.handleClick} { ...this.state } />
             )
         }
     }

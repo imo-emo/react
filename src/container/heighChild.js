@@ -5,7 +5,7 @@ class HeighChild extends Component {
     render () {
         console.log(this.props)
         return (
-            <div>高阶组件</div>
+            <div onClick={() => { this.props.handleClick() }}>高阶组件</div>
         )
     }
 }
