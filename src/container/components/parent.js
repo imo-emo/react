@@ -15,6 +15,7 @@ class Parents extends Component{
         super(props);
         this.state = {
             Pv: '123',
+            inputValue: '0',
         }
         this.PvChange = this.PvChange.bind(this);
     }
@@ -23,12 +24,20 @@ class Parents extends Component{
             Pv: event.target.value,
         })
     }
+    // 派生状态测试
+    inputValueChange = () => {
+        let { inputValue } = { ...this.state };
+        inputValue = Number(inputValue) + 1;
+        this.setState({ inputValue })
+    }
     render(){
         return (
             <div>component
                 <input value={this.state.Pv} onChange={this.PvChange} />
-                <Child val={this.state.Pv}></Child>
-                <Child val={this.state.Pv.split("").reverse().join('')}></Child>
+                <Child val={this.state.Pv} inputValue={this.state.inputValue}></Child>
+                // 当组件有key 的时候每次改变react会重新创建子组件;
+                <Child val={this.state.Pv.split("").reverse().join('')} key={this.state.inputValue} inputValue={this.state.inputValue}></Child>
+                <button onClick={() => { this.inputValueChange() }}>inputValueChange</button>
             </div>
         )
     }

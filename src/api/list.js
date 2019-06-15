@@ -29,6 +29,9 @@ const dataList = [
     }, {
         url: '/context',
         name: 'context'
+    }, {
+        url: '/errorState',
+        name: '错误边界',
     }
 ]
 export default dataList;
